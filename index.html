@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <section class="topic">
-    <div class="info">
-      <h1>Hello World</h1>
-      <p>我是3D工程師，我是豬</p>
-    </div>
-  <img class="cover" src="img/header-bg.jpg" alt="">
-</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="topic">
+        <div class="info">
+          <img class="head" src="img/header-bg1.jpg" alt="" />
+          <h1 class="title">我的名字</h1>
+          <p class="subtitle">我是3D工程師，我劉裕德是豬</p>
 
-<style>
-.topic {
-  display: grid;
-  grid-template-columns:  repeat(3, minmax(0, 1fr));
-  
-}
-.topic .info{
-  grid-column: span 2;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
+          <div class="intro">
+            <p>jfdkfldsa</p>
+            <p>jfdkfldsa</p>
+            <p>jfdkfldsa</p>
+            <p>jfdkfldsa</p>
+          </div>
+        </div>
 
-.info h1 {
-  color: #121212;
-  font-weight: bold;
-  font-size: larger;
-}
+        <img class="cover" src="img/header-bg.jpg" alt="" />
+      </section>
 
-.info p {
-  font-weight: lighter;
-}
+      <section class="feature">
+        <div class="item">
+          <h2>Fjkljklsjslf fsl</h2>
+          <div>
+            <p>
+              hfjdfdflfsdklf jflkfsjl ;<br />
+              jfdsjfi idhif djf jfhr nhf.
+            </p>
+          </div>
+        </div>
 
-.topic .cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-</style>
-</body>
+        <div class="item">
+          <h2>Fjkljklsjslf fsl</h2>
+          <div>
+            <p>
+              hfjdfdflfsdklf jflkfsjl<br />
+              ;jfdsjfi idhif djf jfhr nhf.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <style>
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        background-color: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      main {
+        width: 50vw;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 5rem;
+        box-shadow: 0px 0px 10px #f5f5f5;
+      }
+      .head {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+        box-shadow: 0px 0px 10px #32c9ff55;
+      }
+      .topic {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .info .title {
+        color: #121212;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 0;
+      }
+
+      .info .subtitle {
+        font-weight: lighter;
+      }
+
+      .info .intro {
+        padding-top: 3rem;
+      }
+
+      .cover {
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5rem;
+        position: relative;
+        box-shadow: -30px 30px 0px #aa878b;
+      }
+
+      .feature {
+        display: grid;
+        padding-top: 5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+        gap: 5rem;
+      }
+
+      .feature .item {
+        padding: 2rem;
+      }
+      .item h2 {
+        color: #936b70;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+      }
+      .item h2::before {
+        content: "[ ";
+      }
+      .item h2::after {
+        content: " ]";
+      }
+      .item p {
+        color: #000055;
+      }
+    </style>
+  </body>
 </html>
