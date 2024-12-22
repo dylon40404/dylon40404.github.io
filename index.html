@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .title {
+          @apply text-4xl font-bold;
+          .sub-title {
+            @apply text-2xl font-normal;
+          }
+        }
+
+        .bg-image {
+          @apply bg-contain md:bg-cover bg-bottom md:bg-top bg-no-repeat;
+        }
+
+        .content {
+          @apply flex flex-col md:flex-row justify-center gap-4 bg-[#E5E5E5] px-8 md:px-[10rem] py-8;
+        }
+      }
+    </style>
+  </head>
+  <body class="mx-auto">
+    <header class="bg-[#474747] text-white text-center text-xl">劉昱德</header>
+
+    <!-- banner -->
+
+    <section
+      class="content bg-image h-[40vh] md:h-[80vh]"
+      style="background-image: url('img/dylon/cover.png')"
+    ></section>
+
+    <!-- about me -->
+    <section class="content !grid grid-cols-1 md:grid-cols-3 gap-4 !bg-white">
+      <div class="col-span-1 md:col-span-2">
+        <h2 class="title">
+          <span>關於我</span>
+          <span class="sub-title">劉昱德</span>
+        </h2>
+
+        <p>
+          嗨！我是劉昱德，是一名正在學習的設計師。我的專長包括模型創作、3D列印、2D平面、影視剪輯...等設計相關項目。
+          如果你有有趣的專案或合作機會，隨時與我聯繫吧！
+        </p>
+      </div>
+
+      <div class="rounded-2xl aspect-square overflow-hidden">
+        <img src="img/dylon/me.png" alt="" />
+      </div>
+    </section>
+
+    <!-- works -->
+    <section class="content !grid grid-cols-1 md:grid-cols-3 gap-4">
+      <img src="img/dylon/work-1.png" alt="" />
+      <div class="col-span-1 md:col-span-2">
+        <h2 class="title">
+          <span>雕刻作品</span>
+          <span class="sub-title">小春</span>
+        </h2>
+
+        <p>
+          這個作品是我在當兵那端時間製作出來的，出自手機遊戲-蔚藍檔案的一個角色，使用Zbrush進行製作。在軍中某次莒光日，
+          在中山室滑推特看到這張圖，就下載存到手機裡，放家時回家慢慢刻，
+          一直到退伍前把它刻完，送給當時的輔導長感謝他在軍中對我的照顧。
+        </p>
+      </div>
+    </section>
+
+    <!-- roon -->
+    <section
+      class="p-8 text-white flex flex-col md:flex-row gap-4 bg-[#474747] relative h-[87vh] overflow-hidden"
+    >
+      <div class="w-full md:w-[30vw] ml-0 md:ml-[10rem]">
+        <h2 class="title">
+          <span>3D作品</span>
+          <span class="sub-title">羅恩</span>
+        </h2>
+
+        <p>
+          這個作品可以算是第一個3D創作，是我剛接觸blender時製作的模型，出自手機遊戲-碧藍航線的一個角色，大學時遇到兩位改變我創作方向的老師，
+          在兩位老師的建議下，我慢慢邊學邊做的模型就是這隻，後來幾年後遇到疫情，疫情期間我把這隻模型重新的翻新了一次。
+        </p>
+      </div>
+
+      <div class="md:absolute bottom-0 md:-bottom-[20%] right-0">
+        <img
+          src="img/dylon/roon.png"
+          class="w-full md:w-[60vw] overflow-hidden flex-none"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- work -->
+    <section class="content gap-4 !flex-col">
+      <div class="">
+        <h2 class="title">
+          <span>其他作品</span>
+          <span class="sub-title"></span>
+        </h2>
+
+        <p></p>
+      </div>
+
+      <div class="work-container mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- item -->
+        <script>
+          const works = [
+            {
+              img: "img/dylon/zbwork-1.png",
+              title: "イズナ",
+              description: "雕刻作品",
+            },
+            {
+              img: "img/dylon/work-2.png",
+              title: "霞-布偶",
+              description: "雕刻作品",
+            },
+            {
+              img: "img/dylon/work-3.png",
+              title: "Gura",
+              description: "雕刻作品",
+            },
+            {
+              img: "img/dylon/work-4.png",
+              title: "墓的地",
+              description: "遊戲專題",
+            },
+
+            {
+              img: "img/dylon/work-5.png",
+              title: "市政府AR大廳",
+              description: "商業專案",
+            },
+            {
+              img: "img/dylon/work-6.png",
+              title: "白晝之夜-AR夜市",
+              description: "商業專案",
+            },
+          ];
+
+          const container = document.querySelector(".work-container");
+
+          works.forEach((work) => {
+            const workItem = document.createElement("div");
+            workItem.classList.add("flex", "flex-col", "items-center");
+
+            workItem.innerHTML = `
+              <div class="w-full rounded-2xl aspect-square overflow-hidden bg-[#BCBCBC]">
+                <img class="object-contain object-center w-full h-full" src="${work.img}" alt="${work.title}" />
+              </div>
+              <h3 class="text-bold">${work.title}</h3>
+              <p class="text-sm">${work.description}</p>
+            `;
+
+            container.appendChild(workItem);
+          });
+        </script>
+      </div>
+    </section>
+
+    <footer class="h-20 bg-[#474747] text-white text-center gap-4 text-2xl">
+      聯絡我：dylon40404@gmail.cm
+    </footer>
+  </body>
+</html>
