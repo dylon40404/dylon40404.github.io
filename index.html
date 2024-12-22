@@ -4,187 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
-    <main>
-      <section class="topic">
-        <div class="info">
-          <img class="head" src="img/img1.jpg" alt="" />
-          <div class="title">
-            <h1 class="title">劉昱德</h1>
-          </div>
-          <p class="subtitle">Dylon Liu . 2000.01.11</p>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-          <div class="intro">
-            <p>・dylon40404@gmal.com</p>
-            <p>・3D 建模工程師</p>
-            <p>・在搞AR的公司做三低</p>
-            <p>・日系模型創作</p>
-          </div>
-        </div>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .title {
+          @apply text-4xl font-bold;
+          .sub-title {
+            @apply text-2xl font-normal;
+          }
+        }
 
-        <img class="cover" src="img/img4.png" alt="" />
-      </section>
+        .bg-image {
+          @apply bg-contain md:bg-cover bg-bottom md:bg-top bg-no-repeat;
+        }
 
-      <section class="feature">
-        <div class="item">
-          <h2>從遊戲啟蒙,發展 3D 創作</h2>
-          <div>
-            <p>
-              因緣際會之下接觸到遊戲的美術創作 <br />
-              對遊戲美術設計有了滿滿的興趣 <br />
-              為此決定踏入 3D 遊戲美術之路
-            </p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h2>在學習路上,找到專業技術</h2>
-          <div>
-            <p>
-              在大學中,我努力汲取 3D 專業技術 <br />
-              從臨摹小物、到動畫角色設計 <br />
-              最終能在工作上發揮所能、展現自己
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="expertise">
-        <div class="item">
-          <h2>專長與興趣</h2>
-          <div class="icon">
-            <img class="icon" src="img/icon-01.png" />
-            <img class="icon" src="img/icon-02.png" />
-            <img class="icon" src="img/icon-03.png" />
-            <img class="icon" src="img/icon-04.png" />
-            <img class="icon" src="img/icon-05.png" />
-            <img class="icon" src="img/icon-06.png" />
-            <img class="icon" src="img/icon-07.png" />
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <style>
-      body,
-      html {
-        width: 100%;
-        height: auto;
-      }
-      body {
-        background-color: #fafafa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      main {
-        width: 50vw;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: white;
-        border-radius: 5rem;
-        box-shadow: 0px 0px 10px #f5f5f5;
-      }
-      .head {
-        width: 10rem;
-        height: 10rem;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 100%;
-        box-shadow: 0px 0px 10px #32c9ff55;
-        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-      .head:hover {
-        transform: scale(1.2) rotate(720deg);
-      }
-
-      .topic {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 5rem;
-        /* display: grid; */
-        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-      }
-
-      .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-      }
-
-      .info .title {
-        color: #121212;
-        font-weight: bold;
-        font-size: 3rem;
-        line-height: 0;
-      }
-
-      .info .subtitle {
-        font-weight: lighter;
-      }
-
-      .info .intro {
-        padding-top: 3rem;
-        color: #4f4f4f;
-      }
-
-      .cover {
-        width: 400px;
-        height: 500px;
-        object-fit: cover;
-        object-position: right;
-        border-radius: 5rem;
-        position: relative;
-        box-shadow: -30px 30px 0px #aa878b;
-      }
-
-      .icon {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      .feature {
-        display: grid;
-        padding-top: 5rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        justify-content: center;
-        gap: 5rem;
-      }
-
-      .expertise {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-      }
-
-      .feature .item {
-        padding: 2rem;
-      }
-      .item h2 {
-        color: #936b70;
-        font-size: 1.2rem;
-        font-weight: bold;
-        padding-bottom: 0.5rem;
-      }
-      .item h2::before {
-        content: "[ ";
-      }
-      .item h2::after {
-        content: " ]";
-      }
-      .item p {
-        color: #4f4f4f;
+        .content {
+          @apply flex flex-col md:flex-row justify-center gap-4 bg-[#E5E5E5] px-8 md:px-[10rem] py-8;
+        }
       }
     </style>
+  </head>
+  <body class="mx-auto">
+    <header class="bg-[#474747] text-white text-center text-xl">幹你娘</header>
+
+    <!-- banner -->
+
+    <section
+      class="content bg-image h-[40vh] md:h-[80vh]"
+      style="background-image: url('img/dylon/cover.png')"
+    ></section>
+
+    <!-- about me -->
+    <section class="content !grid grid-cols-1 md:grid-cols-3 gap-4 !bg-white">
+      <div class="col-span-1 md:col-span-2">
+        <h2 class="title">
+          <span>Title</span>
+          <span class="sub-title">Sub</span>
+        </h2>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          accusamus similique ducimus temporibus dolor fuga consequatur
+          assumenda, harum labore recusandae exercitationem? Atque delectus
+          labore molestiae ducimus rem, iusto voluptatum est.
+        </p>
+      </div>
+
+      <div class="rounded-2xl aspect-square overflow-hidden">
+        <img src="img/dylon/me.png" alt="" />
+      </div>
+    </section>
+
+    <!-- works -->
+    <section class="content !grid grid-cols-1 md:grid-cols-3 gap-4">
+      <img src="img/dylon/work-1.png" alt="" />
+      <div class="col-span-1 md:col-span-2">
+        <h2 class="title">
+          <span>Title</span>
+          <span class="sub-title">Sub</span>
+        </h2>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          accusamus similique ducimus temporibus dolor fuga consequatur
+          assumenda, harum labore recusandae exercitationem? Atque delectus
+          labore molestiae ducimus rem, iusto voluptatum est.
+        </p>
+      </div>
+    </section>
+
+    <!-- roon -->
+    <section
+      class="p-8 text-white flex flex-col md:flex-row gap-4 bg-[#474747] relative h-[87vh] overflow-hidden"
+    >
+      <div class="w-full md:w-[30vw] ml-0 md:ml-[10rem]">
+        <h2 class="title">
+          <span>Title</span>
+          <span class="sub-title">Sub</span>
+        </h2>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          accusamus similique ducimus temporibus dolor fuga consequatur
+          assumenda, harum labore recusandae exercitationem? Atque delectus
+          labore molestiae ducimus rem, iusto voluptatum est.
+        </p>
+      </div>
+
+      <div class="md:absolute bottom-0 md:-bottom-[20%] right-0">
+        <img
+          src="img/dylon/roon.png"
+          class="w-full md:w-[60vw] overflow-hidden flex-none"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- work -->
+    <section class="content gap-4 !flex-col">
+      <div class="">
+        <h2 class="title">
+          <span>Title</span>
+          <span class="sub-title">Sub</span>
+        </h2>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          accusamus similique ducimus temporibus dolor fuga consequatur
+          assumenda, harum labore recusandae exercitationem? Atque delectus
+          labore molestiae ducimus rem, iusto voluptatum est.
+        </p>
+      </div>
+
+      <div class="work-container mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- item -->
+        <script>
+          const works = [
+            {
+              img: "img/dylon/work-1.png",
+              title: "Work 1",
+              description: "Description for work 1",
+            },
+            {
+              img: "img/dylon/work-2.png",
+              title: "Work 2",
+              description: "Description for work 2",
+            },
+            {
+              img: "img/dylon/work-3.png",
+              title: "Work 3",
+              description: "Description for work 3",
+            },
+            {
+              img: "img/dylon/work-4.png",
+              title: "Work 4",
+              description: "Description for work 4",
+            },
+
+            {
+              img: "img/dylon/work-4.png",
+              title: "Work 4",
+              description: "Description for work 4",
+            },
+            {
+              img: "img/dylon/work-4.png",
+              title: "Work 4",
+              description: "Description for work 4",
+            },
+          ];
+
+          const container = document.querySelector(".work-container");
+
+          works.forEach((work) => {
+            const workItem = document.createElement("div");
+            workItem.classList.add("flex", "flex-col", "items-center");
+
+            workItem.innerHTML = `
+              <div class="w-full rounded-2xl aspect-square overflow-hidden bg-[#BCBCBC]">
+                <img class="object-contain object-center w-full h-full" src="${work.img}" alt="${work.title}" />
+              </div>
+              <h3 class="text-bold">${work.title}</h3>
+              <p class="text-sm">${work.description}</p>
+            `;
+
+            container.appendChild(workItem);
+          });
+        </script>
+      </div>
+    </section>
+
+    <footer class="h-20 bg-[#474747] text-white text-center gap-4 text-7xl">
+      操你馬！逾期山！
+    </footer>
   </body>
 </html>
